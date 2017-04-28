@@ -48,23 +48,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         item.populateViewHolder(viewHolder);
 
         Log.d("JomloRecyclerView", "OnBindViewHolder("+i+"'");
-        //setAnimation(viewHolder.itemView, i);
     }
 
     @Override
     public int getItemCount() {
         return dataSet.size();
     }
-
-//    private void setAnimation(View viewToAnimate, int position)
-//    {
-//        if (position > lastPosition)
-//        {
-//            Animation animation = AnimationUtils.loadAnimation(viewToAnimate.getContext(), R.an);
-//            viewToAnimate.startAnimation(animation);
-//            lastPosition = position;
-//        }
-//    }
 
     public void add(ItemInterface item) {
         if (dataSet != null)
