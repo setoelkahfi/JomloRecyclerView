@@ -1,4 +1,4 @@
-package id.web.setoelkahfi.jomlorecyclerview;
+package id.web.setoelkahfi.jomlorecyclerviewexample;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

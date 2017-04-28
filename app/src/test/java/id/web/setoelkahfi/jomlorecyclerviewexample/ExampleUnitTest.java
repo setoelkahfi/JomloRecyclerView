@@ -1,4 +1,4 @@
-package id.web.setoelkahfi.jomlorecyclerview;
+package id.web.setoelkahfi.jomlorecyclerviewexample;
 
 import org.junit.Test;
 
