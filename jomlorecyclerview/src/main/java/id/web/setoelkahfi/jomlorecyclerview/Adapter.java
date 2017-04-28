@@ -93,7 +93,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             dataSet.clear();
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public ViewHolder(View itemView) {
             super(itemView);

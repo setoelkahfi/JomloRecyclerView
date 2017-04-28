@@ -26,7 +26,7 @@ public abstract class Item<T extends Adapter.ViewHolder> implements ItemInterfac
             String className = ((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[0].toString().split("\\s")[1];
             return (T)Class.forName(className).getConstructor(this.getClass(), View.class).newInstance(this, v);
         } catch (Exception e) {
-            throw new RuntimeException("please create a viewholder accepting view as arg");
+            throw new RuntimeException("Please create a ViewHolder accepting view as argument.");
         }
     }
 
