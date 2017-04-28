@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("id.web.setoelkahfi.jomlorecyclerview", appContext.getPackageName());
+        assertEquals("id.web.setoelkahfi.jomlorecyclerview.test", appContext.getPackageName());
     }
 }
