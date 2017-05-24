@@ -3,6 +3,44 @@ A detachable RecyclerView component.
 
 Write single or multiple item (component) for the adapter, re-use it in another part. Every component act as a single entity inside the adapter.
 
+## How To Use
+### Import the file
+```java
+import id.web.setoelkahfi.jomlorecyclerview.Adapter;
+import id.web.setoelkahfi.jomlorecyclerview.ItemInterface;
+```
+### Use it in activity
+Create reference to the adapter, create the dataset, and hook them up together via dependency injection.
+ ```java
+ public class MainActivity extends AppCompatActivity {
+ 
+     private RecyclerView recyclerView;
+     private Adapter jomloAdapter;
+     private List<ItemInterface<? extends Adapter.ViewHolder>> jomloDataSet = new ArrayList<>();
+ 
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_main);
+ 
+         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+         jomloAdapter = new Adapter(jomloDataSet);
+         recyclerView.setAdapter(jomloAdapter);
+         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+ 
+         for (int i=0; i < 20; i++) {
+             SimpleItem item = new SimpleItem("Simple Example", "Subtest");
+             jomloDataSet.add(item);
+         }
+ 
+         jomloAdapter.notifyDataSetChanged();
+ 
+     }
+ }
+ ```
+
+
+## The Files
 ### Adapter
 Custom adapter to hold our items. Used it as adapter for regular RecyclerView.
 ```java
